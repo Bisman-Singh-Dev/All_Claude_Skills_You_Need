@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need/pulls)
 [![Maintained](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need)
 
-> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, and razor-sharp token optimization.
+> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, and intentional anti-slop UI design.
 
 ---
 
@@ -18,6 +18,7 @@
   - [2. Opus-Level Intelligence](#2-opus-level-intelligence)
   - [3. Blender Cinematic Director](#3-blender-cinematic-director)
   - [4. Autodesk Fusion Master](#4-autodesk-fusion-master)
+  - [5. Anti-AI-Slop UI Design](#5-anti-ai-slop-ui-design)
 - [How to Install & Use](#-how-to-install--use)
   - [Method A: Claude Code / CLI](#method-a-claude-code--cli)
   - [Method B: Claude Desktop & Projects](#method-b-claude-desktop--projects)
@@ -31,7 +32,7 @@
 
 ## 🌟 Overview
 
-Claude models are remarkably capable, but default interactions can suffer from verbose filler, rushed reasoning, or lack of deep domain-specific workflows. 
+Claude models are remarkably capable, but default interactions can suffer from verbose filler, rushed reasoning, generic template styling, or lack of deep domain-specific workflows. 
 
 **All Claude Skills You Need** provides drop-in modular skills packaged with standard YAML frontmatter specifications (`SKILL.md`). Each skill equips Claude with strict protocols, domain mental models, and production-tested behavioral guidelines.
 
@@ -42,6 +43,8 @@ Claude models are remarkably capable, but default interactions can suffer from v
 ```
 All_Claude_Skills_You_Need/
 ├── skills/
+│   ├── anti-ai-slop-ui/
+│   │   └── SKILL.md              # Bespoke, production-grade UI design avoiding generic AI cliches
 │   ├── autodesk-fusion-master/
 │   │   └── SKILL.md              # Mechanical CAD, parametric modeling, CAM & CNC
 │   ├── blender-cinematic-director/
@@ -64,6 +67,7 @@ All_Claude_Skills_You_Need/
 | **Opus-Level Intelligence** | [`skills/opus-level-intelligence`](skills/opus-level-intelligence/SKILL.md) | High-Order Reasoning & Architecture | Elevating Sonnet to Opus discipline, full-stack architecture, deep debugging |
 | **Blender Cinematic Director** | [`skills/blender-cinematic-director`](skills/blender-cinematic-director/SKILL.md) | 3D Production & Advertising | Shot design, product commercials, procedural shaders, complete `bpy` automation |
 | **Autodesk Fusion Master** | [`skills/autodesk-fusion-master`](skills/autodesk-fusion-master/SKILL.md) | Mechanical CAD & Manufacturing | Parametric assemblies, joints, 3D printing, CAM toolpaths, Fusion Python API |
+| **Anti-AI-Slop UI Design** | [`skills/anti-ai-slop-ui`](skills/anti-ai-slop-ui/SKILL.md) | Frontend & Product UI Engineering | Crafting distinctive, human-crafted interfaces; banishing generic neon SaaS gradients & fake cards |
 
 ---
 
@@ -168,6 +172,30 @@ Combines the capabilities of a mechanical design engineer, CAD specialist, CAM m
 
 ---
 
+### 5. Anti-AI-Slop UI Design
+📂 **Path:** [`skills/anti-ai-slop-ui/SKILL.md`](skills/anti-ai-slop-ui/SKILL.md)  
+🎯 **Focus:** Intentional Art Direction · Restrained Typography · Real Data · Anti-Cliché Web Design
+
+#### What It Does
+Enforces senior product design principles to create distinctive, human-crafted interfaces. Banishes cliché AI-generated tropes like default purple/pink gradients, excessive nested glassmorphism, floating decorative blobs, identical three-column card grids, and meaningless placeholder copy.
+
+#### Core Modules
+- **Intentional Visual Directions:** Selects deliberate styles tailored to the product (Editorial, Modern Utility, Premium Minimal, Technical/Industrial, Warm & Human, Expressive).
+- **Anti-AI-Slop Directives:**
+  - Prohibits lazy purple/cyan glow borders, random floating orbs, and unnecessary glass cards.
+  - Replaces generic stock icons and emoji clutter with purposeful iconography and clean layout hierarchy.
+  - Avoids "cardifying" every single block of text or metric.
+- **Content-First Design:** Enforces realistic domain-specific data, authentic copy, and meaningful empty/error states (no lorem ipsum or fake testimonials).
+- **Production Polish:** Strict WCAG 2.2 AA accessibility, keyboard navigation, visible focus rings, responsive viewport reflows, and `prefers-reduced-motion` compliance.
+
+#### Example Prompts to Activate
+```markdown
+"Redesign this analytics dashboard to feel like a high-density, modern financial utility rather than a generic dark-mode SaaS template."
+"Design an editorial landing page for an architectural studio with asymmetric typography and restrained neutral tones."
+```
+
+---
+
 ## 🚀 How to Install & Use
 
 ### Method A: Claude Code / CLI
@@ -208,14 +236,14 @@ import anthropic
 
 client = anthropic.Anthropic()
 
-with open("skills/opus-level-intelligence/SKILL.md", "r", encoding="utf-8") as f:
-    opus_skill = f.read()
+with open("skills/anti-ai-slop-ui/SKILL.md", "r", encoding="utf-8") as f:
+    ui_skill = f.read()
 
 response = client.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=4096,
-    system=opus_skill,
-    messages=[{"role": "user", "content": "Design an event-driven architecture."}]
+    system=ui_skill,
+    messages=[{"role": "user", "content": "Build a clean, high-density telemetry dashboard."}]
 )
 print(response.content[0].text)
 ```
