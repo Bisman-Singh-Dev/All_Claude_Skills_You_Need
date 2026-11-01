@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need/pulls)
 [![Maintained](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need)
 
-> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, and intentional anti-slop UI design.
+> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, intentional anti-slop UI design, and master-level Python media & batch automation.
 
 ---
 
@@ -19,6 +19,7 @@
   - [3. Blender Cinematic Director](#3-blender-cinematic-director)
   - [4. Autodesk Fusion Master](#4-autodesk-fusion-master)
   - [5. Anti-AI-Slop UI Design](#5-anti-ai-slop-ui-design)
+  - [6. Python Editing Master](#6-python-editing-master)
 - [How to Install & Use](#-how-to-install--use)
   - [Method A: Claude Code / CLI](#method-a-claude-code--cli)
   - [Method B: Claude Desktop & Projects](#method-b-claude-desktop--projects)
@@ -51,6 +52,10 @@ All_Claude_Skills_You_Need/
 │   │   └── SKILL.md              # 3D ad direction, photorealism, bpy scripts & renders
 │   ├── opus-level-intelligence/
 │   │   └── SKILL.md              # Elite reasoning discipline, senior dev & self-verification
+│   ├── python-editing-master/
+│   │   ├── SKILL.md              # Media, PDF, Office & batch automation editing master
+│   │   ├── README.md             # Submodule overview
+│   │   └── references/           # In-depth workflows (image, video/audio, office/pdf, batch)
 │   └── token-efficiency-optimizer/
 │       └── SKILL.md              # Zero-fluff, concise answers, focused diffs & maximum density
 ├── LICENSE                       # MIT License
@@ -68,6 +73,7 @@ All_Claude_Skills_You_Need/
 | **Blender Cinematic Director** | [`skills/blender-cinematic-director`](skills/blender-cinematic-director/SKILL.md) | 3D Production & Advertising | Shot design, product commercials, procedural shaders, complete `bpy` automation |
 | **Autodesk Fusion Master** | [`skills/autodesk-fusion-master`](skills/autodesk-fusion-master/SKILL.md) | Mechanical CAD & Manufacturing | Parametric assemblies, joints, 3D printing, CAM toolpaths, Fusion Python API |
 | **Anti-AI-Slop UI Design** | [`skills/anti-ai-slop-ui`](skills/anti-ai-slop-ui/SKILL.md) | Frontend & Product UI Engineering | Crafting distinctive, human-crafted interfaces; banishing generic neon SaaS gradients & fake cards |
+| **Python Editing Master** | [`skills/python-editing-master`](skills/python-editing-master/SKILL.md) | Media, Document & Batch Processing | Non-destructive image, audio, video, PDF, Excel/Office automation, and batch pipelines |
 
 ---
 
@@ -196,6 +202,30 @@ Enforces senior product design principles to create distinctive, human-crafted i
 
 ---
 
+### 6. Python Editing Master
+📂 **Path:** [`skills/python-editing-master/SKILL.md`](skills/python-editing-master/SKILL.md)  
+🎯 **Focus:** Non-destructive media processing · Image, Video, Audio, PDF & Office automation · Batch pipelines
+
+#### What It Does
+Acts as an expert Python media engineer and production artist. Delivers production-grade transformations and automation across images, video, audio, PDFs, spreadsheets, and office documents without corrupting or overwriting original source files.
+
+#### Core Modules
+- **Inspect Before Editing:** Validates dimensions, page counts, codecs, color profiles, formulas, and fonts prior to running operations.
+- **Non-Destructive Media Pipelines:** Preserves source files, color spaces, layers, formulas, and metadata.
+- **Specialized Workflows ([`references/`](skills/python-editing-master/references/)):**
+  - **Image Editing:** Pillow, OpenCV, scikit-image (color grading, cropping, composite masks, EXIF preservation).
+  - **Video & Audio:** FFmpeg, MoviePy, PyAV (transcoding, audio normalization, clip concatenation, subtitle synchronization).
+  - **Office & PDF:** PyMuPDF, pdfplumber, openpyxl, python-docx (PDF repair, formula preservation, table extraction, document generation).
+  - **Batch Automation:** Parallelized processing, dry-run safety modes, structured logging, and robust error isolation.
+
+#### Example Prompts to Activate
+```markdown
+"Write a Python script using PyMuPDF to merge multiple scanned PDFs, OCR low-resolution pages, and normalize page orientations without losing bookmarks."
+"Process this folder of 500 product images using Pillow: resize to 2048x2048 canvas, add subtle drop shadows, and export web-optimized WebP with preserved metadata."
+```
+
+---
+
 ## 🚀 How to Install & Use
 
 ### Method A: Claude Code / CLI
@@ -236,14 +266,14 @@ import anthropic
 
 client = anthropic.Anthropic()
 
-with open("skills/anti-ai-slop-ui/SKILL.md", "r", encoding="utf-8") as f:
-    ui_skill = f.read()
+with open("skills/python-editing-master/SKILL.md", "r", encoding="utf-8") as f:
+    python_skill = f.read()
 
 response = client.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=4096,
-    system=ui_skill,
-    messages=[{"role": "user", "content": "Build a clean, high-density telemetry dashboard."}]
+    system=python_skill,
+    messages=[{"role": "user", "content": "Build a batch PDF watermarking script with PyMuPDF."}]
 )
 print(response.content[0].text)
 ```
