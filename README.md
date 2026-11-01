@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need/pulls)
 [![Maintained](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need)
 
-> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, intentional anti-slop UI design, master-level Python media automation, short-form video editing, and motion graphics design.
+> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, intentional anti-slop UI design, master-level Python media automation, short-form viral editing, motion graphics design, and professional video finishing & lighting.
 
 ---
 
@@ -22,6 +22,7 @@
   - [6. Python Editing Master](#6-python-editing-master)
   - [7. Short-Form Video Editor Master](#7-short-form-video-editor-master)
   - [8. Motion Graphics Designer Master](#8-motion-graphics-designer-master)
+  - [9. Video Quality & Lighting Specialist](#9-video-quality--lighting-specialist)
 - [How to Install & Use](#-how-to-install--use)
   - [Method A: Claude Code / CLI](#method-a-claude-code--cli)
   - [Method B: Claude Desktop & Projects](#method-b-claude-desktop--projects)
@@ -66,8 +67,11 @@ All_Claude_Skills_You_Need/
 │   │   ├── SKILL.md              # TikTok, Reels, Shorts editing, pacing, captions & FFmpeg recipes
 │   │   ├── README.md             # Submodule overview
 │   │   └── references/           # Editing checklist, FFmpeg recipes, caption design guides
-│   └── token-efficiency-optimizer/
-│       └── SKILL.md              # Zero-fluff, concise answers, focused diffs & maximum density
+│   ├── token-efficiency-optimizer/
+│   │   └── SKILL.md              # Zero-fluff, concise answers, focused diffs & maximum density
+│   └── video-quality-lighting/
+│       ├── SKILL.md              # Video finishing, lighting repair, denoising & color grading
+│       └── README.md             # Submodule overview
 ├── LICENSE                       # MIT License
 └── README.md                     # Documentation & setup guide
 ```
@@ -86,6 +90,7 @@ All_Claude_Skills_You_Need/
 | **Python Editing Master** | [`skills/python-editing-master`](skills/python-editing-master/SKILL.md) | Media, Document & Batch Processing | Non-destructive image, audio, video, PDF, Excel/Office automation, and batch pipelines |
 | **Short-Form Video Editor Master** | [`skills/shortform-video-editor`](skills/shortform-video-editor/SKILL.md) | Reels, TikTok & Shorts Video Production | Precision hook design, rhythm/pacing, burned-in styled captions, and FFmpeg filtergraphs |
 | **Motion Graphics Designer Master** | [`skills/motion-graphics-designer`](skills/motion-graphics-designer/SKILL.md) | Motion Design & Title Sequences | Kinetic typography, 2D/2.5D animation, easing curves, spatial hierarchies, and Lottie/video QC |
+| **Video Quality & Lighting Specialist** | [`skills/video-quality-lighting`](skills/video-quality-lighting/SKILL.md) | Finishing, Lighting & Color Science | Dark/noisy footage repair, natural skin tone preservation, highlight recovery, DaVinci/FFmpeg workflows |
 
 ---
 
@@ -280,6 +285,28 @@ Operates as a veteran animation director and motion designer. Creates intentiona
 
 ---
 
+### 9. Video Quality & Lighting Specialist
+📂 **Path:** [`skills/video-quality-lighting/SKILL.md`](skills/video-quality-lighting/SKILL.md)  
+🎯 **Focus:** Footage Enhancement · Lighting Repair · Color Science · Detail & Texture Preservation
+
+#### What It Does
+Acts as a senior video finishing artist, colorist, and restoration engineer. Enhances underexposed, noisy, flat, or poorly lit footage into clean, well-balanced, broadcast-grade video without plastic AI smoothing or unnatural color shifts.
+
+#### Core Modules
+- **Non-Destructive Exposure & Lighting:** Midtone calibration, shadow lifting without washed-out blacks, highlight detail recovery, and motivated subject-background separation.
+- **Texture-Preserving Denoising:** Chroma-before-luminance denoising, temporal filtering, and avoidance of waxy skin or smearing artifacts.
+- **Color Science & Grading:** Shot-to-shot white balance matching, realistic skin tones, gamut protection, and subtle contrast grading instead of aggressive teal/orange presets.
+- **Artifact & Flicker Remediation:** Deflicker diagnosis (LED banding vs. rolling shutter), conservative edge-preserving sharpening, and de-banding filters.
+- **Cross-Platform Finishing:** Tooling strategies across DaVinci Resolve, FFmpeg, Premiere/After Effects, and Python/OpenCV.
+
+#### Example Prompts to Activate
+```markdown
+"Provide an FFmpeg command pipeline to clean up underexposed, noisy 4K interview footage: temporal denoising, shadow lifting, and gentle contrast without waxy skin."
+"Analyze this poorly lit indoor scene and provide a DaVinci Resolve node graph plan to balance mixed color temperatures and recover subject highlights."
+```
+
+---
+
 ## 🚀 How to Install & Use
 
 ### Method A: Claude Code / CLI
@@ -320,14 +347,14 @@ import anthropic
 
 client = anthropic.Anthropic()
 
-with open("skills/shortform-video-editor/SKILL.md", "r", encoding="utf-8") as f:
-    shortform_skill = f.read()
+with open("skills/video-quality-lighting/SKILL.md", "r", encoding="utf-8") as f:
+    video_skill = f.read()
 
 response = client.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=4096,
-    system=shortform_skill,
-    messages=[{"role": "user", "content": "Create a vertical Reels cut plan for this interview."}]
+    system=video_skill,
+    messages=[{"role": "user", "content": "How do I color-correct mixed tungsten and daylight footage in DaVinci Resolve?"}]
 )
 print(response.content[0].text)
 ```
