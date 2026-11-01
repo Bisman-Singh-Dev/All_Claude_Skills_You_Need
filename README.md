@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need/pulls)
 [![Maintained](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Bisman-Singh-Dev/All_Claude_Skills_You_Need)
 
-> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, intentional anti-slop UI design, and master-level Python media & batch automation.
+> **The ultimate, curated arsenal of production-grade Claude & AI Agent skills.** Supercharge Claude with deep reasoning, precision 3D cinematics, expert parametric CAD engineering, razor-sharp token optimization, intentional anti-slop UI design, master-level Python media automation, short-form video editing, and motion graphics design.
 
 ---
 
@@ -20,6 +20,8 @@
   - [4. Autodesk Fusion Master](#4-autodesk-fusion-master)
   - [5. Anti-AI-Slop UI Design](#5-anti-ai-slop-ui-design)
   - [6. Python Editing Master](#6-python-editing-master)
+  - [7. Short-Form Video Editor Master](#7-short-form-video-editor-master)
+  - [8. Motion Graphics Designer Master](#8-motion-graphics-designer-master)
 - [How to Install & Use](#-how-to-install--use)
   - [Method A: Claude Code / CLI](#method-a-claude-code--cli)
   - [Method B: Claude Desktop & Projects](#method-b-claude-desktop--projects)
@@ -50,12 +52,20 @@ All_Claude_Skills_You_Need/
 │   │   └── SKILL.md              # Mechanical CAD, parametric modeling, CAM & CNC
 │   ├── blender-cinematic-director/
 │   │   └── SKILL.md              # 3D ad direction, photorealism, bpy scripts & renders
+│   ├── motion-graphics-designer/
+│   │   ├── SKILL.md              # Motion graphics, typography animation, UI motion & rendering QC
+│   │   ├── README.md             # Submodule overview
+│   │   └── references/           # Motion principles, layout & typography, rendering QC guides
 │   ├── opus-level-intelligence/
 │   │   └── SKILL.md              # Elite reasoning discipline, senior dev & self-verification
 │   ├── python-editing-master/
 │   │   ├── SKILL.md              # Media, PDF, Office & batch automation editing master
 │   │   ├── README.md             # Submodule overview
 │   │   └── references/           # In-depth workflows (image, video/audio, office/pdf, batch)
+│   ├── shortform-video-editor/
+│   │   ├── SKILL.md              # TikTok, Reels, Shorts editing, pacing, captions & FFmpeg recipes
+│   │   ├── README.md             # Submodule overview
+│   │   └── references/           # Editing checklist, FFmpeg recipes, caption design guides
 │   └── token-efficiency-optimizer/
 │       └── SKILL.md              # Zero-fluff, concise answers, focused diffs & maximum density
 ├── LICENSE                       # MIT License
@@ -74,6 +84,8 @@ All_Claude_Skills_You_Need/
 | **Autodesk Fusion Master** | [`skills/autodesk-fusion-master`](skills/autodesk-fusion-master/SKILL.md) | Mechanical CAD & Manufacturing | Parametric assemblies, joints, 3D printing, CAM toolpaths, Fusion Python API |
 | **Anti-AI-Slop UI Design** | [`skills/anti-ai-slop-ui`](skills/anti-ai-slop-ui/SKILL.md) | Frontend & Product UI Engineering | Crafting distinctive, human-crafted interfaces; banishing generic neon SaaS gradients & fake cards |
 | **Python Editing Master** | [`skills/python-editing-master`](skills/python-editing-master/SKILL.md) | Media, Document & Batch Processing | Non-destructive image, audio, video, PDF, Excel/Office automation, and batch pipelines |
+| **Short-Form Video Editor Master** | [`skills/shortform-video-editor`](skills/shortform-video-editor/SKILL.md) | Reels, TikTok & Shorts Video Production | Precision hook design, rhythm/pacing, burned-in styled captions, and FFmpeg filtergraphs |
+| **Motion Graphics Designer Master** | [`skills/motion-graphics-designer`](skills/motion-graphics-designer/SKILL.md) | Motion Design & Title Sequences | Kinetic typography, 2D/2.5D animation, easing curves, spatial hierarchies, and Lottie/video QC |
 
 ---
 
@@ -226,6 +238,48 @@ Acts as an expert Python media engineer and production artist. Delivers producti
 
 ---
 
+### 7. Short-Form Video Editor Master
+📂 **Path:** [`skills/shortform-video-editor/SKILL.md`](skills/shortform-video-editor/SKILL.md)  
+🎯 **Focus:** TikTok, Reels & Shorts Post-Production · Narrative Hooks · Pacing · FFmpeg Filtergraphs
+
+#### What It Does
+Directs short-form vertical video post-production with the discipline of a senior viral editor. Turns raw footage into engaging, platform-native 9:16 vertical videos with precise hook pacing, audio ducking, burned-in captions, and zero generic template clutter.
+
+#### Core Modules
+- **Narrative Structure:** 1–2 second instant hook, tight context delivery, zero-dead-air rhythm, payoff reveal, and seamless loops.
+- **Audio Engineering:** Loudness normalization to -14 LUFS, voice EQ clarity, noise suppression, and subtle audio ducking under dialogue.
+- **Caption Typography ([`references/caption-design.md`](skills/shortform-video-editor/references/caption-design.md)):** High-legibility captions in the safe zone, 2–4 words per line, contrast outlines/boxes, avoiding UI overlay collisions.
+- **FFmpeg Recipes ([`references/ffmpeg-recipes.md`](skills/shortform-video-editor/references/ffmpeg-recipes.md)):** Production filtergraphs for crop/scale (1080x1920), speed ramps, picture-in-picture, split screens, and stream copying.
+
+#### Example Prompts to Activate
+```markdown
+"Take this 5-minute podcast recording, find the most engaging 45-second segment, write an FFmpeg command to crop it to vertical 9:16 with animated captions in the platform safe zone."
+"Create an editorial breakdown and cut list for a TikTok tech product review with sound design and B-roll cues."
+```
+
+---
+
+### 8. Motion Graphics Designer Master
+📂 **Path:** [`skills/motion-graphics-designer/SKILL.md`](skills/motion-graphics-designer/SKILL.md)  
+🎯 **Focus:** Kinetic Typography · 2D/2.5D Motion · Easing Curves · UI Motion · Render QC
+
+#### What It Does
+Operates as a veteran animation director and motion designer. Creates intentional motion graphics systems with purposeful spatial choreography, organic easing curves, hierarchical kinetic typography, and multi-format exports.
+
+#### Core Modules
+- **Core Motion Principles ([`references/motion-principles.md`](skills/motion-graphics-designer/references/motion-principles.md)):** Timing vs. spacing, cubic bezier easing, anticipation, follow-through, overlapping action, and hold rhythms.
+- **Typography & Layout ([`references/typography-and-layout.md`](skills/motion-graphics-designer/references/typography-and-layout.md)):** Hierarchy, tracking, kinetic line-by-line animations, grid alignment, and safe title areas.
+- **Multi-Tool Execution:** Scripting and designing for Python (Manim, MoviePy), SVG/Lottie/Bodymovin, CSS/Web Animations, and Blender compositor.
+- **Rendering & Quality Control ([`references/rendering-qc.md`](skills/motion-graphics-designer/references/rendering-qc.md)):** Alpha channel verification (ProRes 4444 / WebM VP9), color space management, sub-pixel rendering, and motion blur checks.
+
+#### Example Prompts to Activate
+```markdown
+"Design a 6-second kinetic typography opening title sequence for a documentary series using cubic-bezier easing and asymmetric grids."
+"Generate a clean, lightweight SVG/CSS animated logo reveal with responsive scale and prefers-reduced-motion fallbacks."
+```
+
+---
+
 ## 🚀 How to Install & Use
 
 ### Method A: Claude Code / CLI
@@ -266,14 +320,14 @@ import anthropic
 
 client = anthropic.Anthropic()
 
-with open("skills/python-editing-master/SKILL.md", "r", encoding="utf-8") as f:
-    python_skill = f.read()
+with open("skills/shortform-video-editor/SKILL.md", "r", encoding="utf-8") as f:
+    shortform_skill = f.read()
 
 response = client.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=4096,
-    system=python_skill,
-    messages=[{"role": "user", "content": "Build a batch PDF watermarking script with PyMuPDF."}]
+    system=shortform_skill,
+    messages=[{"role": "user", "content": "Create a vertical Reels cut plan for this interview."}]
 )
 print(response.content[0].text)
 ```
